@@ -15,3 +15,10 @@ SELECT * FROM animals WHERE neutered = true;
 SELECT * FROM animals WHERE name NOT LIKE 'Gabumon';
 
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
+
+BEGIN;
+
+  UPDATE animals
+  SET species = 'unspecified';
+
+ROLLBACK;
