@@ -14,3 +14,5 @@ ADD species VARCHAR(50);
 
 CREATE TABLE owners ( id BIGSERIAL NOT NULL, full_name VARCHAR(150), age INT );
 CREATE TABLE species ( id BIGSERIAL NOT NULL, name VARCHAR(150) );
+
+ ALTER TABLE animals DROP COLUMN species;
