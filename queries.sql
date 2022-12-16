@@ -22,3 +22,10 @@ BEGIN;
   SET species = 'unspecified';
 
 ROLLBACK;
+
+BEGIN;
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
+SELECT * FROM animals;
+UPDATE animals SET species = 'Pokemon' WHERE species is NULL;
+COMMIT;
+SELECT * FROM animals;
